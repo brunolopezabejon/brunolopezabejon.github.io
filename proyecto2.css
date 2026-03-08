@@ -29,11 +29,11 @@
 /* BADGE ACADÉMICO */
 .proyecto-badge {
     display: inline-block;
-    background-color: #f0f7ff;
+    background-color: #ffffff; /* Puesto en blanco para que resalte sobre el gris */
     color: #2c3e50;
-    padding: 6px 15px;
+    padding: 10px 20px;
     border-radius: 20px;
-    font-size: 0.85rem;
+    font-size: 1.1rem;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 25px;
@@ -45,32 +45,35 @@
     color: #3498db;
 }
 
-/* LOGO ABEJA (Control de ancho y centrado) */
+/* LOGO ABEJA */
 .proyecto-logo-abeja {
     display: block;
-    max-width: 400px; /* Ancho reducido como estaba antes */
-    height: auto;
+    width: 100%; 
+    max-height: 450px; 
+    object-fit: contain; 
     margin: 0 auto 40px;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* IMÁGENES DE DIAGRAMAS (DAFO, Canvas, Propuesta) */
 .img-diagrama {
     width: 100%;
-    max-height: 450px; /* Evita que los diagramas horizontales sean gigantes */
-    object-fit: contain; /* Ajusta sin recortar el texto */
-    background-color: #f8f9fa;
+    max-height: 450px; 
+    object-fit: contain; 
+    background-color: #ffffff; /* Fijo en blanco para que haga contraste */
     border-radius: 8px;
+    border: 1px solid #dce4ec; /* Borde sutil para enmarcar la foto */
     margin: 20px 0;
     display: block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Sombra para que flote sobre el fondo gris */
 }
 
 /* CONTENIDO Y SECCIONES */
 .proyecto-contenido {
-    background: #ffffff;
+    background: #f0f4f8; /* <--- AQUÍ ESTÁ EL FONDO GRIS CLARITO */
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -86,14 +89,14 @@
 
 .proyecto-seccion {
     margin-top: 40px;
-    border-top: 1px solid #f0f0f0;
+    border-top: 1px solid #dce4ec;
     padding-top: 30px;
 }
 
 .proyecto-seccion h2 {
     color: #2c3e50;
     margin-bottom: 20px;
-    font-size: 1.8rem;
+    font-size: 1.4rem; 
     display: flex;
     align-items: center;
     gap: 10px;
@@ -103,8 +106,9 @@
 .proyecto-tech {
     margin-top: 30px;
     padding: 20px;
-    background-color: #f8fbff;
+    background-color: #ffffff;
     border-radius: 8px;
+    border: 1px solid #dce4ec;
 }
 
 .tech-icons {
@@ -115,8 +119,8 @@
 }
 
 .tech-icons span {
-    background: #ffffff;
-    border: 1px solid #dfebfd;
+    background: #f0f4f8;
+    border: 1px solid #dce4ec;
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -142,4 +146,47 @@
 .btn-enlace:hover {
     background-color: #1a5276;
     transform: translateY(-3px);
+}
+
+/* =========================================
+   TABLA DAFO INTERACTIVA
+   ========================================= */
+.dafo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.dafo-item {
+    background: #ffffff;
+    border: 1px solid #dce4ec;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dafo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.dafo-item h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #f0f4f8;
+    padding-bottom: 10px;
+}
+
+.dafo-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: left;
 }

@@ -219,3 +219,28 @@ footer {
     color: #ffffff;
     transform: translateY(-5px);
 }
+
+/* --- NUEVO: ARREGLO PARA LA NUBE DE GITHUB --- */
+
+.skill-tags span.github-tag {
+    padding: 0; /* Quitamos el padding del span para que lo maneje el enlace */
+    background-color: transparent; /* El fondo lo pondrá el enlace de dentro */
+}
+
+.skill-tags span.github-tag a {
+    text-decoration: none;  /* Quita la línea azul */
+    color: #333;           /* Color de texto igual a las demás etiquetas */
+    background-color: #e1f5fe; /* Azulito claro de fondo */
+    padding: 8px 15px;      /* Padding igual a las otras etiquetas */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Cambio de color al pasar la flecha (Hover) */
+.skill-tags span.github-tag a:hover {
+    background-color: #3498db; /* Azul corporativo */
+    color: #ffffff;           /* Texto en blanco para resaltar */
+}
