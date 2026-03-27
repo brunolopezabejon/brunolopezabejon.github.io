@@ -190,3 +190,32 @@
     margin-bottom: 0;
     text-align: left;
 }
+
+/* =========================================
+   DISEÑO RESPONSIVO (MÓVILES) - PROYECTO 2
+   ========================================= */
+@media (max-width: 768px) {
+    .proyecto-titulo {
+        font-size: 1.8rem;
+    }
+    
+    .proyecto-contenido {
+        padding: 20px; /* Reducimos el margen interior para ganar espacio */
+    }
+
+    .proyecto-badge {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .proyecto-logo-abeja {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* La tabla DAFO se pone en una sola columna automáticamente gracias al Grid, 
+       pero ajustamos un poco el espaciado interior */
+    .dafo-item {
+        padding: 15px;
+    }
+}

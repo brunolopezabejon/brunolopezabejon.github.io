@@ -244,3 +244,84 @@ footer {
     background-color: #3498db; /* Azul corporativo */
     color: #ffffff;           /* Texto en blanco para resaltar */
 }
+
+/* --- NUEVO: ESTILOS PARA LAS IMÁGENES CUSTOM DE PROYECTOS --- */
+
+/* Alineación de la imagen y el texto en el título del proyecto */
+.card h3 {
+    display: flex; /* Activa Flexbox */
+    align-items: center; /* Alineación vertical perfecta al centro */
+    justify-content: center; /* Mantiene el título centrado en la tarjeta */
+    gap: 10px; /* Separación entre la imagen y el texto */
+    margin-bottom: 15px; /* Espacio debajo del título */
+}
+
+/* Estilo controlado para las imágenes de los proyectos */
+.project-icon {
+    width: 35px;  /* Controlamos el ancho para que parezca un icono */
+    height: 35px; /* Controlamos el alto */
+    object-fit: contain; /* Para que la imagen se ajuste sin estirarse */
+    background-color: transparent; /* Mantiene el fondo limpio */
+}
+
+/* =========================================
+   DISEÑO RESPONSIVO (MÓVILES) - INDEX
+   ========================================= */
+@media (max-width: 768px) {
+    /* Ajustes del Menú de Navegación */
+    .top-nav {
+        justify-content: center;
+        padding: 15px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .top-nav a {
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
+
+    /* Ajustes de la Cabecera (Hero) */
+    header {
+        padding-top: 150px; /* Más espacio arriba por si el menú ocupa dos líneas */
+        padding-bottom: 50px;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    header h2 {
+        font-size: 1.1rem;
+        padding: 0 15px;
+    }
+
+    /* Ajustes de Sobre Mí (Poner la foto arriba y el texto abajo) */
+    .about-columns {
+        flex-direction: column-reverse; /* Foto arriba, texto abajo */
+        gap: 30px;
+        text-align: center;
+    }
+    .about-photo-col img {
+        width: 200px;
+        height: 250px;
+    }
+    .about-text-col {
+        text-align: justify;
+    }
+
+    /* Ajustes de Skills */
+    .skills-grid {
+        flex-direction: column;
+    }
+    .skill-category {
+        min-width: 100%; /* Las tarjetas ocupan todo el ancho */
+    }
+
+    /* Ajustes de Proyectos */
+    .card {
+        width: 100%; /* Las tarjetas de proyectos ocupan todo el ancho */
+    }
+
+    /* Ajustes del Footer */
+    .social-links {
+        gap: 30px; /* Reducimos el espacio entre iconos sociales */
+    }
+}

@@ -192,3 +192,34 @@
     background-color: #1a5276;
     transform: translateY(-3px);
 }
+
+/* =========================================
+   DISEÑO RESPONSIVO (MÓVILES) - PROYECTO 1
+   ========================================= */
+@media (max-width: 768px) {
+    .proyecto-titulo {
+        font-size: 1.8rem;
+    }
+    
+    .proyecto-contenido {
+        padding: 20px; /* Reducimos el margen interior para ganar espacio */
+    }
+
+    .proyecto-badge {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .banner-tour {
+        height: 200px; /* Hacemos el banner más bajito en móviles */
+    }
+
+    .banner-overlay span {
+        font-size: 1.1rem;
+        padding: 8px 15px;
+    }
+    
+    .img-proceso {
+        max-height: 400px; /* Ajustamos las fotos verticales */
+    }
+}
